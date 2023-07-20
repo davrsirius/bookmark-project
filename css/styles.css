@@ -39,8 +39,8 @@
   --blue: #5267df;
   --reddish: #fa5959;
   --text-color: #242a45;
-  --text-color-75: rgba(36, 42, 69, 0, 75);
-  --text-color-50: rgba(36, 42, 69, 0, 50);
+  --text-color-75: rgba(36, 42, 69, 0.75);
+  --text-color-50: rgba(36, 42, 69, 0.50);
 }
 
 /* GLOBAL */
@@ -258,6 +258,65 @@ select:-webkit-autofill:focus {
   margin-right: 48px;
 }
 
+
+/* Hero */
+
+.hero {
+  padding-top: 66px;
+  padding-bottom: 105px;
+  background-image: url('../images/blue-pill-bg.svg');
+  background-repeat: no-repeat;
+  background-position: calc(50% + 704px) 200px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero__content {
+  flex-shrink: 0;
+  padding-top: 66px;
+  width: 100%;
+  max-width: 540px;
+  margin-right: 65px;
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-bottom: 24px;
+  color: var(--text-color);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 52px;
+  letter-spacing: -0.15px;
+}
+
+.hero__description {
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: var(--text-color-50);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.hero-actions {
+  display: flex;
+}
+
+.hero-actions-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.hero__img {
+  flex-shrink: 0;
+  width: 578px;
+  height: 385px;
+  object-fit: cover;
+  border-radius: 26px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.50));
+}
 
 
 
