@@ -172,6 +172,12 @@ select:-webkit-autofill:focus {
   background-color: #fff;
 }
 
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+
 /* CONTAINER */
 
 .container {
@@ -260,6 +266,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 16px;
   font-size: 32px;
   line-height: 52px;
+  font-style: normal;
   font-weight: 500;
   color: var(--text-color);
 }
@@ -267,6 +274,7 @@ select:-webkit-autofill:focus {
 .section__description {
   margin-top: 0;
   font-size: 18px;
+  font-style: normal;
   line-height: 28px;
 }
 
@@ -351,6 +359,9 @@ select:-webkit-autofill:focus {
 
 /* Features  */
 
+.features {
+  padding-bottom: 0;
+}
 .features__section-info {
   margin-bottom: 44px;
 }
@@ -431,9 +442,11 @@ select:-webkit-autofill:focus {
 .feature-tab-panel__img--bookmark-manager {
   margin-right: 125px;
 }
+
 .feature-tab-panel__img--simple {
   margin-right: 118px;
 }
+
 .feature-tab-panel__img--sharing {
   margin-right: 146px;
 }
@@ -461,6 +474,85 @@ select:-webkit-autofill:focus {
   line-height: 28px;
 }
 
+
+/* Extension */
+.extensions-inner {
+  max-width: 910px;
+  margin: 0 auto;
+}
+
+.extensions__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-left: -35px;
+}
+
+.extensions__item {
+  width: 100%;
+  max-width: 280px;
+  margin-left: 35px;
+}
+
+.extensions__item:nth-child(2) {
+  margin-top: 40px;
+}
+.extensions__item:nth-child(3) {
+  margin-top: 80px;
+}
+
+.extension {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 24px 24px;
+  border-radius: 15px;
+  background: #FFF;
+  box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20);
+  text-align: center;
+}
+
+.extension::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 96px;
+  background-image: url('../images/extension/extension_divider.svg');
+  background-position: center center;
+
+}
+
+.extensions__img {
+  object-fit: contain;
+  width: 105px;
+  height: 100px;
+  margin-bottom: 32px;
+}
+
+.extensions__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.25px;
+}
+
+.extensions__browser-version {
+  margin-top: 0;
+  margin-bottom: 60px;
+  color: var(--text-color-50);
+  font-size: 15px;
+  line-height: 28px;
+  font-style: normal;
+}
 
 
 
