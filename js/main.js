@@ -1,26 +1,33 @@
+const modifiers = {
+    tabsItemActive: 'tabs__item--active',
+    accordionItem: '.accordion__item',
+    tabpanelsItemActive: 'tabpanels__item--active',
+    accordionItemOpen: 'accordion__item--open'
+}
+
 const elsTabsItem = document.querySelectorAll('.tabs__item');
 const elsTabLink = document.querySelectorAll('.js-tab-link');
 const elsTabPanels = document.querySelectorAll('.tabpanels__item');
 
-const elsAccordionItem = document.querySelectorAll('.accordion__item');
+const elsAccordionItem = document.querySelectorAll(modifiers.accordionItem);
 const elsAccordionItemToggler = document.querySelectorAll('.accordion__item-toggler');
 
 
 function deactivateAccordions () {
     elsAccordionItem.forEach(function (elAccordionItem){
-        elAccordionItem.classList.remove('accordion__item--open')
+        elAccordionItem.classList.remove(modifiers.accordionItemOpen);
     });
 }
 
 function deactivateTabItems() {
     elsTabsItem.forEach(function (elTabsItem) {
-        elTabsItem.classList.remove('tabs__item--active');
+        elTabsItem.classList.remove(modifiers.tabsItemActive);
     });
 }
 
 function deactivatePanels() {
     elsTabPanels.forEach(function (elTabPanel) {
-        elTabPanel.classList.remove('tabpanels__item--active');
+        elTabPanel.classList.remove(modifiers.tabpanelsItemActive);
     });
 }
 
@@ -35,7 +42,7 @@ elsTabLink.forEach(function (elTablink) {
         deactivateTabItems();
 
         // add active class to current tabs__item
-        elTablink.parentElement.classList.add('tabs__item--active');
+        elTablink.parentElement.classList.add(modifiers.tabsItemActive);
 
         // remove active class from tabpanels__item elements
         deactivatePanels();
@@ -45,7 +52,7 @@ elsTabLink.forEach(function (elTablink) {
         //  const elTargetPanel = document.querySelector(`#${elTablink.href.split("#")[1]}`);
 
         const elTargetPanel = document.querySelector(elTablink.dataset.tabTarget);
-        elTargetPanel.classList.add('tabpanels__item--active')
+        elTargetPanel.classList.add(modifiers.tabpanelsItemActive)
 
         // console.log(elTablink.dataset.tabTarget);
 
@@ -63,7 +70,7 @@ elsAccordionItemToggler.forEach(function (elAccordionItemToggler) {
         
         deactivateAccordions();
 
-        elAccordionItemToggler.closest('.accordion__item').classList.add('accordion__item--open');
-        // elsAccordionItem.classList.add('accordion__item--open');
+        elAccordionItemToggler.closest(modifiers.accordionItem).classList.add(modifiers.accordionItemOpen);
+        // elsAccordionItem.classList.add(modifiers.accordionItemOpen);
     });
 }); 

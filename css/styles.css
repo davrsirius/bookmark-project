@@ -263,6 +263,9 @@ select:-webkit-autofill:focus {
 .accordion__item-text {
   margin: 0;
 }
+.accordion__item-text:not(:last-child) {
+  margin-bottom: 20px;
+}
 
 .accordion__item-text:not(:last-child) {
   margin-bottom: 20px;
@@ -772,7 +775,7 @@ select:-webkit-autofill:focus {
   position: absolute;
   z-index: -1;
   left: 0;
-  top: calc(100% - 5spx);
+  top: calc(100% - 5px);
   display: none;
   font-size: 10px;
   font-style: italic;
